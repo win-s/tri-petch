@@ -1,0 +1,38 @@
+@import './variable.module.scss';
+
+@mixin mobile {
+    @media screen and (max-width: $mobile-size-px) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet-size-px) and (min-width: $tablet-min-size-px) {
+        @content
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: $desktop-size-px) and (min-width: $desktop-min-size-px) {
+        @content
+    }
+}
+
+@mixin big-screen {
+    @media screen and (min-width: $big-screen-min-px) {
+        @content
+    }
+}
+
+@mixin break($max-width, $min-width: 0px) {
+    @media screen and (max-width: $max-width) and (min-width: $min-width) {
+        @content
+    }
+}
+
+@mixin player-container-style {
+    display: flex;
+    flex-direction: column;
+    margin-top: $desktop-top-padding;
+    position: relative;
+}

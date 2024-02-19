@@ -1,0 +1,152 @@
+@import '../../share/style/mixins.scss';
+
+//======= layout ===========
+
+.athletesWrapper {
+    @include player-container-style;
+
+    // :global(.image-container-img) {
+
+    //     width: 678px;
+
+    //     top: -50px;
+    //     left: 9vw;
+
+    // }
+}
+
+@include big-screen {
+    .athletesWrapper {
+        :global(.image-container-img) {
+
+            width: 678px;
+
+            top: -165px;
+            left: 175px;
+
+        }
+    }
+}
+
+@include desktop {
+    .athletesWrapper {
+
+        :global(.image-container-img) {
+
+            width: 678px;
+
+            top: -165px;
+            left: 175px;
+
+        }
+
+    }
+}
+
+
+@include break(1700px, $desktop-min-size-px) {
+    .athletesWrapper {
+
+        :global(.image-container-img) {
+
+            left: 9vw;
+
+        }
+
+    }
+}
+
+@include break(1500px, $desktop-min-size-px) {
+    .athletesWrapper {
+
+        :global(.image-container-img) {
+
+            width: 35vw;
+        }
+
+    }
+}
+
+@include break(1200px, $desktop-min-size-px) {
+    .athletesWrapper {
+
+        :global(.image-container-img) {
+
+            width: 450px;
+            left: 8vw;
+        }
+
+    }
+}
+
+@include break(1000px, $desktop-min-size-px) {
+    .athletesWrapper {
+
+        :global(.image-container-img) {
+            top: -15vw;
+            left: -5vw;
+        }
+
+    }
+}
+
+@include tablet {
+    .athletesWrapper {
+        margin-top: $tablet-top-padding;
+
+        :global(.image-container-img) {
+            top: -100px;
+            width: 357px;
+        }
+    }
+}
+
+$tablet-smaller-px: $tablet-size - 1 + px;
+
+@include break($tablet-smaller-px, $tablet-min-size-px) {
+    .athletesWrapper {
+        :global(.image-container-img) {
+            width: 300px;
+            top: -150px;
+        }
+    }
+}
+
+
+@include break(650px, $tablet-min-size-px) {
+    .athletesWrapper {
+
+        :global(.image-container-img) {
+            width: 250px;
+            left: -25px;
+            top: -110px;
+        }
+    }
+}
+
+@include break(500px, $tablet-min-size-px) {
+    .athletesWrapper {
+
+        :global(.image-container-img) {
+            width: 200px;
+            left: -45px;
+            top: -100px;
+        }
+    }
+}
+
+@include mobile {
+
+    .athletesWrapper {
+        margin-top: $mobile-top-padding;
+
+        :global(.image-container-wrapper) {
+            height: 251px;
+
+            :global(.image-container-img) {
+                width: 218px;
+                height: 281px;
+            }
+        }
+    }
+}

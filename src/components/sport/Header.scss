@@ -1,0 +1,128 @@
+@import '../../share//style/mixins.scss';
+
+.header {
+    .content-container-wrapper {
+        // display: flex;
+        // justify-content: center;
+
+        .content-container {
+            // display: flex;
+            padding: 0 $desktop-left-padding;
+            // width: 1920px;
+
+            .sport-header {
+                color: #E7E7E7;
+                font-size: 90px;
+                line-height: 105px;
+                letter-spacing: 0px;
+
+                margin-bottom: 10px;
+            }
+
+        }
+
+    }
+}
+
+/*================= desktop =============*/
+@include desktop {
+    .sport-header-wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1000px) and (min-width: $desktop-min-size-px) {
+    .header {
+        .content-container-wrapper {
+            .content-container {
+                .sport-header {
+                    font-size: 8vw;
+                }
+            }
+        }
+    }
+}
+
+/*==================== tablet ===============*/
+@include tablet {
+    .header {
+        .content-container-wrapper {
+            .content-container {
+                padding: 0 $tablet-left-padding;
+
+                .sport-header-dummy-left {
+                    flex: 1
+                }
+
+                .sport-header {
+                    margin-bottom: 15px;
+                    // width: $tablet-content-width-px;
+                }
+
+            }
+        }
+    }
+}
+
+@include break($tablet-smaller-size-px, $tablet-min-size-px) {
+    .header {
+        .content-container-wrapper {
+            .content-container {
+                .sport-header {
+                    // width: $tablet-content-width-vw;
+                    font-size: 11vw;
+                }
+            }
+        }
+    }
+}
+
+
+@include break(500px, $tablet-min-size-px) {
+    .header {
+        .content-container-wrapper {
+            .content-container {
+                .sport-header-dummy-left {
+                    flex: unset;
+                }
+
+                .sport-header {
+                    // font-size: 18vw;
+                }
+
+            }
+        }
+    }
+
+}
+
+/* ============= mobile ============*/
+
+@include mobile {
+    .header {
+        .content-container-wrapper {
+            .content-container {
+                display: block;
+                padding: 0 $mobile-left-padding;
+
+                .sport-header {
+                    font-size: 50px;
+                    line-height: 59px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@include break(290px, 1px) {
+    .header {
+        .content-container-wrapper {
+            .content-container {
+                .sport-header {
+                    font-size: 15.5vw;
+                }
+            }
+        }
+    }
+}

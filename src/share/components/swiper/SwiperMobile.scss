@@ -1,0 +1,49 @@
+//overwrite default 
+
+@at-root {
+
+    :root {
+        --swiper-pagination-color: #603EBE;
+        --swiper-pagination-bullet-inactive-color: #D8D8D8;
+        --swiper-pagination-bullet-inactive-opacity: 1;
+        --swiper-pagination-bullet-size: 10px;
+        --swiper-pagination-bullet-width: 10px;
+        --swiper-pagination-bullet-height: 10px;
+
+        --swiper-pagination-bullet-horizontal-gap: 6px;
+        --swiper-pagination-bullet-vertical-gap: 0px;
+        --swiper-pagination-bottom: 25px;
+        /*
+    --swiper-pagination-color: var(--swiper-theme-color);
+    --swiper-pagination-left: auto;
+    --swiper-pagination-right: 8px;
+    --swiper-pagination-bottom: 8px;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-fraction-color: inherit;
+    --swiper-pagination-progressbar-bg-color: rgba(0,0,0,0.25);
+    --swiper-pagination-progressbar-size: 4px;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-border-radius: 50%;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    */
+    }
+}
+
+//overwrite swiper-list style for bigger screen
+.swiper-big-screen-container {
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+//overwrite swiper-list libary to show full height background
+.swiper-slide {
+    height: auto !important;
+}

@@ -1,0 +1,135 @@
+@import '../../share/style/mixins.scss';
+
+/*======= layout ===========*/
+
+.playersWrapper {
+    @include player-container-style;
+
+}
+
+@include big-screen {
+    .playersWrapper {
+
+        :global(.image-container-img) {
+            width: 991px;
+
+            top: -205px;
+            right: 125px;
+
+        }
+    }
+}
+
+@include desktop {
+    .playersWrapper {
+
+        :global(.image-container-img) {
+            width: 991px;
+
+            top: -205px;
+            right: 125px;
+
+        }
+    }
+}
+
+@include break(1800px, $desktop-min-size-px) {
+    .playersWrapper {
+
+        :global(.image-container-img) {
+            right: -3vw;
+        }
+    }
+}
+
+@include break(1500px, $desktop-min-size-px) {
+    .playersWrapper {
+
+        :global(.image-container-img) {
+            right: -5vw;
+            width: 50vw;
+        }
+    }
+}
+
+@include break(1200px, $desktop-min-size-px) {
+    .playersWrapper {
+
+        :global(.image-container-img) {
+            top: -10vw;
+            width: 600px;
+
+        }
+    }
+}
+
+@include break(1000px, $desktop-min-size-px) {
+    .playersWrapper {
+
+        :global(.image-container-img) {
+            // top: 10vw;
+            top: -100px;
+            right: -185px;
+        }
+    }
+}
+
+@include tablet {
+    .playersWrapper {
+        margin-top: $tablet-top-padding;
+
+        :global(.image-container-img) {
+            top: -139px;
+            right: 0px;
+
+            width: 437px;
+        }
+    }
+}
+
+@include break(750px, $tablet-min-size-px) {
+    .playersWrapper {
+        :global(.image-container-img) {
+            // width: 56vw;
+            // top: 0vw;
+            right: -50px;
+            width: 400px;
+        }
+    }
+}
+
+@include break(600px, $tablet-min-size-px) {
+    .playersWrapper {
+        :global(.image-container-img) {
+            width: 350px;
+            right: -80px;
+        }
+    }
+}
+
+@include break(350px, $tablet-min-size-px) {
+    .playersWrapper {
+        :global(.image-container-img) {
+            right: -95px;
+        }
+    }
+}
+
+@include mobile {
+    .playersWrapper {
+        margin-top: $mobile-top-padding;
+
+        :global(.image-container-wrapper) {
+            height: 220px;
+
+            :global(.image-container-img) {
+                width: 302px;
+                height: 250px;
+            }
+        }
+    }
+
+}
+
+
+/*=======================*/

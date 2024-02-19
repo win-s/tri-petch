@@ -1,0 +1,38 @@
+$mobile-size: 320;
+$tablet-size: 768;
+$desktop-size: 1920;
+
+$mobile-size-px: $mobile-size + px;
+
+$tablet-size-px: $tablet-size + px;
+$tablet-smaller-size-px: $tablet-size - 1 + px;
+$tablet-min-size-px: $mobile-size + 1 + px;
+
+$desktop-size-px: $desktop-size + px;
+$desktop-min-size-px: $tablet-size + 1 + px;
+$desktop-smaller-size-px: $desktop-size - 1 + px;
+
+$big-screen-min-px: $desktop-size + 1 + px;
+
+$mobile-left-padding: 20px;
+$mobile-top-padding: 20px;
+$tablet-left-padding: 30px;
+$tablet-top-padding: 50px;
+$desktop-left-padding: 48px;
+$desktop-top-padding: 100px;
+
+$desktop-content-athlete-dummy-left-width-px: 928px;
+$desktop-content-athlete-dummy-left-width: 48vw;
+$desktop-content-player-dummy-left-width-px: 262px;
+$desktop-content-player-dummy-left-width: 13vw;
+$desktop-content-width: 717;
+$desktop-content-width-px: $desktop-content-width + px;
+// $desktop-content-width-vw: ;
+$tablet-content-width-px: 447px;
+$tablet-content-width-vw: 62vw;
+
+:export {
+    mobileSize: $mobile-size;
+    tabletSize: $tablet-size;
+    desktopSize: $desktop-size;
+}

@@ -1,0 +1,193 @@
+@import '../../style/mixins.scss';
+@import '../../style/variable.module.scss';
+
+.content-container-wrapper {
+    width: 100%;
+
+    .content-container {
+        height: 100%;
+        display: flex;
+
+    }
+}
+
+
+
+/*================== device ==================*/
+@mixin content-padding {
+    &.athlete {
+        .content-dummy-left {
+            width: $desktop-content-athlete-dummy-left-width-px;
+        }
+    }
+
+    &.player {
+        .content-dummy-left {
+            width: $desktop-content-player-dummy-left-width-px;
+        }
+    }
+
+    .content {
+        width: $desktop-content-width-px;
+    }
+}
+
+@include big-screen {
+    .content-container-wrapper {
+        display: flex;
+        justify-content: center;
+
+        .content-container {
+
+            padding: 60px $desktop-left-padding;
+            width: $desktop-size-px;
+
+            @include content-padding();
+
+        }
+
+    }
+}
+
+@include desktop {
+    .content-container-wrapper {
+        .content-container {
+            width: 100%;
+            display: flex;
+            padding: 60px $desktop-left-padding;
+
+            @include content-padding();
+        }
+    }
+}
+
+@include break($desktop-smaller-size-px, $desktop-min-size-px) {
+    .content-container-wrapper {
+        .content-container {
+            &.athlete {
+                .content-dummy-left {
+                    width: $desktop-content-athlete-dummy-left-width;
+                }
+            }
+
+            &.player {
+                .content-dummy-left {
+                    width: $desktop-content-player-dummy-left-width;
+                }
+            }
+        }
+    }
+}
+
+@include break(1500px, $desktop-min-size-px) {
+    .content-container-wrapper {
+        .content-container {
+            &.athlete {
+                .content-dummy-left {
+                    width: unset;
+                    flex: 1;
+                }
+
+                .content {
+                    flex: 1;
+                }
+            }
+
+            &.player {
+
+                .content {
+                    flex: 0.6;
+                }
+            }
+        }
+    }
+}
+
+@include break(1200px, $desktop-min-size-px) {
+    .content-container-wrapper {
+        .content-container {
+
+            &.player {
+                .content-dummy-left {
+                    width: 5vw;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .content-container-wrapper {
+        .content-container {
+            padding: 30px $tablet-left-padding;
+
+            &.athlete {
+                .content-dummy-left {
+                    flex: 1;
+                }
+            }
+
+            .content {
+                width: $tablet-content-width-px;
+            }
+        }
+    }
+}
+
+@include break($tablet-smaller-size-px, $tablet-min-size-px) {
+    .content-container-wrapper {
+        .content-container {
+            // padding: 30px $tablet-left-padding;
+
+            .content {
+                width: $tablet-content-width-vw;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .content-container-wrapper {
+        height: 100%;
+
+        .content-container {
+            // padding: 60px $mobile-left-padding;
+            display: block;
+
+            .content {
+
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*============ theme ============*/
+
+$theme-1: (
+    background: #FFF,
+);
+
+$theme-2: (
+    background: #F5F4F9,
+);
+
+$theme-3: (
+    background: #5E3DB3,
+);
+
+$theme-4: (
+    background: #090C35,
+);
+
+@mixin themable($theme-name, $theme-map) {
+    .#{$theme-name}.content-container-wrapper {
+        background: map-get($theme-map , background);
+    }
+}
+
+@include themable(theme-1, $theme-1);
+@include themable(theme-2, $theme-2);
+@include themable(theme-3, $theme-3);
+@include themable(theme-4, $theme-4);
+/*======================================*/
