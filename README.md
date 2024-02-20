@@ -56,3 +56,8 @@ Mobile screen size 320px
   src="./docs/images/mobile.png"
   alt="mobile screen size 320px">
 </figure>
+Create web application according to the following design for 3 screen size (1920 px,768 px,320 px)
+
+# Design
+
+[Code Design In Detail](./docs/code-design.md) 
